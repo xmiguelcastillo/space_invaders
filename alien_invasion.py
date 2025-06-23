@@ -170,28 +170,23 @@ class AlienInvasion:
 
         # Score
 
-        self.text_score_title = self.font.render(
-            "SCORE<1>", True, (56, 243, 255))
-        self.text_score = self.font.render(
-            f"000{self.points}", True, (255, 255, 255))
+        self.text_score_title = self.font.render("SCORE<1>", True, (56, 243, 255))
+        self.text_score = self.font.render(f"000{self.points}", True, (255, 255, 255))
 
         # Score Rect
         self.text_rect1 = self.text_score_title.get_rect(topleft=(50, 10))
         self.text_rect2 = self.text_score.get_rect(topleft=(90, 50))
 
         # Hi-Score
-        self.text_hi_score_title = self.font.render(
-            "HI-SCORE", True, (94, 91, 255))
-        self.text_hi_score = self.font.render(
-            f"{hi_score}", True, (255, 255, 255))
+        self.text_hi_score_title = self.font.render("HI-SCORE", True, (94, 91, 255))
+        self.text_hi_score = self.font.render(f"{hi_score}", True, (255, 255, 255))
 
         # Hi-Score Rect
         self.text_rect3 = self.text_hi_score_title.get_rect(topleft=(300, 10))
         self.text_rect4 = self.text_hi_score.get_rect(topleft=(370, 50))
 
         # Score 2
-        self.text_score_title2 = self.font.render(
-            "SCORE<2>", True, (255, 224, 156))
+        self.text_score_title2 = self.font.render("SCORE<2>", True, (255, 224, 156))
         self.text_score2 = self.font.render("00000", True, (255, 255, 255))
 
         # Hi-Score Rect
@@ -264,8 +259,7 @@ class AlienInvasion:
             pygame.time.delay(1000)
             pygame.quit()
             sys.exit()
-        hits = pygame.sprite.groupcollide(
-            self.bullets, self.aliens, True, True)
+        hits = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
         if hits:
             self.kill_sound()
 
@@ -284,8 +278,7 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
 
-        hits2 = pygame.sprite.groupcollide(
-            self.shields, self.bullets, False, True)
+        hits2 = pygame.sprite.groupcollide(self.shields, self.bullets, False, True)
         for shield, bullets in hits2.items():
             for bullet in bullets:
                 shield.hit()
@@ -303,38 +296,4 @@ class AlienInvasion:
 if __name__ == "__main__":
     ai = AlienInvasion()
     ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
-    ai.run_game()
+
